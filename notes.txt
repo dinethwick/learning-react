@@ -1,0 +1,10 @@
+npm - package manager
+vite - used to quickly setup a react app
+
+1. react app quick setup
+>>> npm create vite@latest
+
+2. cd to newly created dir and install dependencies
+>>> npm install 
+
+files:
