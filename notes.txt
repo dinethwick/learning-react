@@ -1,10 +1,78 @@
+setup
+
 npm - package manager
 vite - used to quickly setup a react app
+appwrite - used to setup backend. open source
 
 1. react app quick setup
->>> npm create vite@latest
-
+	>>> npm create vite@latest
 2. cd to newly created dir and install dependencies
->>> npm install 
+	>>> npm install 
+3. run locally
+	npm run dev
+
+
 
 files:
+
+src/
+* main.jsx - entry point for react app.
+	* imports react, renders the root component App into the DOM
+* app.jsx
+	* root react component. contains the first visible content of your app. you build the UI on top of this?
+* app.css - for styling app.jsx
+* index.css - main styling file. define global styles for application
+
+src/assets: for images
+* reference images from this folder:
+* import reactLogo from './assets/react.svg'
+
+root/
+* package.json - manage dependencies, scripts (commands like dev, build, preview)
+* package lock - to make sure other devices / or dev team uses the same package versions
+
+* vite.config.js - configuration for vite. used to set aliases and define plugins.
+* eslint.config.js - js linting/debugging config
+
+* index.html - entry point for react app.
+	vite uses entry point (react will infuse this with entire application) - <div id="root">
+	link the js modules - <script type="module" src="/src/main.jsx"></script> 
+
+public/ - for static assets like images
+* can be referenced directly by /filename 
+* import viteLogo from '/vite.svg'
+
+node_modules/  - holds all installed dependencies (React, Vite, etc.)
+
+rules
+
+dont push to github (add to gitignore)
+* .env file
+* node modules
+
+
+components
+
+old method - class components - used in older react projects and codebases
+.\pasted_image_250711-001.png
+
+new method - just declare as function
+* see how the card component is reused inside app
+.\pasted_image_250711-002.png
+
+
+
+Props (properties)
+this is how react passed data from one component to another.
+Usually a parent component passes data into child components
+think of props as arguments that you pass to a function
+
+here we pass the movie title to the card, which is then displayed through App
+.\pasted_image_250711-003.png
+
+
+Styling
+react works with all css frameworks
+
+inline styling will override stylesheets (if style is defined inline, it will override style dfines in seperate sheet or global styles)
+.\pasted_image_250711-004.png
