@@ -11,14 +11,13 @@ const Card = ({title}) => {
       <h2>{title}</h2>
 
       <button onClick={() => setHasLiked(true)}>
-        {hasLiked ? 'Liked': 'Like'}
+        {hasLiked ? '❤️': '🤍'}
       </button>
     </div>
   )
 }
 
 const App = () => {
-  
 
   return(
     <div className="card-container">
